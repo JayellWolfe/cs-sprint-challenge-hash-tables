@@ -1,10 +1,17 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    
+    storage = {}    
+    result = []
+   
+    for num in a:        
+        if storage.get(
+                abs(num)):             
+            if (storage.get(abs(num)) + num) == 0:                
+                result.append(abs(num))
+        else:            
+            storage[abs(num)] = num
     return result
+
 
 
 if __name__ == "__main__":
